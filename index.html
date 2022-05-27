@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoTrueData.png" type="image/jpg" />
+    <title>TrueData - Giải pháp công nghệ</title>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- lib animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <a href="/" class="logo">
+            <img src="images/logoTrueData.png" alt="logoTrueData">
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="navbar">
+            <a href="#home" class="active">trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#ecosystem">hệ sinh thái</a>
+            <a href="#customer">Đối tác</a>
+            <a href="#footer">liên hệ</a>
+        </nav>
+    </header>
+    <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+
+            //smoothscroll
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+
+                var target = this.hash,
+                    menu = target;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top + 2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+
+        function onScroll(event) {
+            var scrollPos = $(document).scrollTop();
+            $('.navbar a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if ((refElement.position().top - 200) <= scrollPos && (refElement.position().top - 200) + refElement.height() > scrollPos) {
+                    $('.navbar a').removeClass("active");
+                    currLink.addClass("active");
+                }
+                else {
+                    currLink.removeClass("active");
+                }
+            });
+        }
+    </script>
+    <div class="container">
+
+    </div>
+    <!-- home section -->
+    <div id="home">
+        <section class="home" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+            data-aos-offset="0">
+            <div class="content" data-aos="fade-right" data-aos-delay="1700" data-aos-offset="0">
+                <h4>Welcome to True Data</h4>
+                <h3> <span>TrueData</span><br><span class="blue">Giải pháp công nghệ</span> </h3>
+                <p>TrueData chịu trách nhiệm với người tiêu dùng về chất lượng sản phẩm và nguồn gốc xuất xứ của chúng
+                </p>
+                <p> TrueData ra đời với hoàn cảnh mọi định chế giao thương Online toàn cầu cần một luồng dữ liệu thật để
+                    tiến hành giao dịch.
+                </p>
+
+                <div class="flex social-btns">
+                    <a class="app-btn blu flex vert" href="/">
+                        <i class="fab fa-apple"></i>
+                        <p>Available on the <br /> <span class="big-txt">App Store</span></p>
+                    </a>
+
+                    <a class="app-btn blu flex vert"
+                        href="https://play.google.com/store/apps/details?id=com.ob.truedata" target="_blank">
+                        <i class="fab fa-google-play"></i>
+                        <p>Get it on <br /> <span class="big-txt">Google Play</span></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="images/home-img.png" alt="home-background">
+            </div>
+        </section>
+        <div class="video_iframe">
+            <iframe style="border-radius: 2rem;" width="100%" height="100%" src="https://www.youtube.com/embed/0Ay0rjWuob4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <section class="quotes" data-aos="flip-down">
+            <div class="wrapper">
+                <blockquote lang="en">
+                    Phải có ai đó chịu trách nhiệm về nguồn gốc và chất lượng sản phẩm
+                </blockquote>
+
+                <blockquote lang="fr">
+                    Đường đi của sản phẩm song song đường đi của dữ liệu
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <!-- Section: Modal -->
+    <div id="modal">
+
+    </div>
+
+    <div id="about">
+        <section class="about">
+            <div class="left-about" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0">
+                <img src="./images/about-left-image.png" alt="about-left">
+            </div>
+            <div class="box-container">
+                <div class="box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0"
+                    data-aos-delay="500">
+                    <div class="box-logo">
+                        <img src="./images/about-1.png" alt="about-1">
+                    </div>
+                    <div class="content-about">
+                        <h3>OneDataBox</h3>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0"
+                    data-aos-delay="950">
+                    <div class="box-logo">
+                        <img src="./images/about-2.png" alt="about-1">
+                    </div>
+                    <div class="content-about">
+                        <h3>OneBox</h3>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0"
+                    data-aos-delay="1450">
+                    <div class="box-logo">
+                        <img src="./images/about-3.png" alt="about-1">
+                    </div>
+                    <div class="content-about">
+                        <h3>AIOneBox</h3>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0"
+                    data-aos-delay="1950">
+                    <div class="box-logo">
+                        <img src="./images/about-4.png" alt="about-1">
+                    </div>
+                    <div class="content-about">
+                        <h3>NameViet</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- ecosystem section -->
+    <section class="ecosystem" id="ecosystem">
+        <h1 class="heading" data-aos="flip-up"><span>TrueData</span> cung cấp một <br> <span class="even">Hệ sinh
+                thái</span></h1>
+        <div class="box-container" id="list-products">
+
+        </div>
+        <div class="services-left-dec">
+            <img src="./images/services-left-dec.png" alt="services-left-dec">
+        </div>
+        <div class="services-right-dec">
+            <img src="./images/services-right-dec.png" alt="services-right-dec">
+        </div>
+    </section>
+
+    <div class="video_iframe">
+        <iframe style="border-radius: 2rem;" width="100%" height="100%" src="https://www.youtube.com/embed/T4Q_BfNCZuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="trigger section gutter-horizontal bg-gray gutter-vertical--m gutter-horizontal" id="customer">
+        <div class="customer">
+
+            <h2>
+                Đối tác của chúng tôi
+            </h2>
+            <p>Chúng Tôi Đã Làm Việc Với Một Số Khách Hàng Tuyệt Vời Trong Nhiều Năm</p>
+            <div class="customer-logos slider">
+                <div class="slide-in-right slide"><img src="./images/customer1.png" alt="Customer1" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer2.png" alt="Customer2" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer3.png" alt="Customer3" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer4.png" alt="Customer4" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer5.png" alt="Customer5" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer6.png" alt="Customer6" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer7.jpg" alt="Customer7" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer8.png" alt="Customer8" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer9.png" alt="Customer9" height="150"
+                        width="150"></a></div>
+                <div class="slide-in-right slide"><img src="./images/customer10.png" alt="Customer10" height="150"
+                        width="150"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <!-- contact section -->
+        <section id="contact">
+            <div class="contact-us section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="section-heading">
+                                <h2>Hãy để lại <em>lời nhắn</em> và chúng tôi sẽ <span>kết nối</span> với bạn ngay</h2>
+                                <div id="map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.9091116740852!2d106.62253598210663!3d10.82304964281973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b72bdb52f27%3A0xbe624f4a7a52c112!2sC%C3%B4ng%20ty%20TNHH%20OneBox!5e0!3m2!1svi!2shk!4v1628484798025!5m2!1svi!2shk"
+                                        width="100%" height="360px" frameborder="0" style="border:0"
+                                        allowfullscreen=""></iframe>
+                                </div>
+                                <div class="info">
+                                    <span><i class="fa fa-phone"></i><a href="tel:+84789763373">0789 763 373</a></span>
+                                    <span><i class="fa fa-envelope"></i>
+                                        <a style="text-transform: lowercase;"
+                                            href="mailto:truedatasolution@gmail.com">truedatasolution@gmail.com</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 align-self-center">
+                            <form id="contact" action="" method="get">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <input type="name" name="name" id="name" placeholder="Họ & Tên"
+                                                autocomplete="on" required>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <input style="text-transform: none" type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                                placeholder="Email" required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <textarea name="message" id="message" placeholder="Lời nhắn..." cols="30"
+                                                rows="5" required=""></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="main-button">Gửi lời
+                                                nhắn</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contact-left-dec">
+                <img src="./images/contact-left-dec.png" alt="contact-left-dec">
+            </div>
+            <div class="contact-right-dec">
+                <img src="./images/videos-right-dec.png" alt="videos-right-dec">
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- footer section -->
+        <div class="footer">
+            <div class="box-container">
+                <div class="box box-about">
+                    <h3>giới thiệu</h3>
+                    <p> <span>TrueData</span>, với sản phẩm bảo hiểm “Mua hàng chính hãng”, những gì chúng tôi cung cấp
+                        cho
+                        người mua
+                        là dữ liệu thật, không ngụy tạo. Điều đó hình thành nên định chế trung gian gắn liền người mua
+                        và
+                        người bán. Chúng tôi muốn đóng góp bằng cả tâm huyết của mình trong hành trình : <br> "Mang sản
+                        phẩm
+                        Việt ra thị trường thế giới"</p>
+
+                </div>
+
+                <div class="box box-quick-link">
+                    <h3>Đường dẫn</h3>
+                    <a href="#home">Trang chủ</a>
+                    <a href="#about">giới thiệu</a>
+                    <a href="#ecosystem">Hệ sinh thái</a>
+                    <a href="#customer">đối tác</a>
+                    <a href="#contact">liên hệ</a>
+                </div>
+                <div class="box box-contact">
+                    <h3>liên hệ</h3>
+                    <div class="info">
+                        <div class="icon-phone">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <a href="tel:+0789763373">0789 763 373</a>
+                    </div>
+                    <div class="info">
+                        <div class="icon-email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <a style="text-transform: lowercase;"
+                            href="mailto:truedatasolution@gmail.com">truedatasolution@gmail.com</a>
+                    </div>
+                    <div class="info">
+                        <div class="icon-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <a href="https://goo.gl/maps/1nKvFbxSH4ceQ29s9" target="_blank" rel="noopener noreferrer">E40
+                            đường
+                            C3, p Tân thới nhât, Q. 12</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-after">
+                <p>
+                    © 2021. All Rights Reserved. Designed by <a href="#">TrueData</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        let arrayProduct = [
+            {
+                logo: './images/logoTrueData.png',
+                name: 'TrueData',
+                description: "Thông qua việc tạo nên luồng dữ liệu thật,TrueData hẳn sẽ làm hài lòng những khách hàng khó tính ở khắp nơi trên thế giới",
+                context: "Trong bối cảnh các cường quốc kinh tế Thế giới co mình chống dịch Covid 19 thì giao thương chuyển sang hình thức Online là chủ yếu.Việt Nam cũng bị chi phối bởi hình thức giao thương này. Nhưng niềm tin của khách hàng đối với Việt Nam nhiều hạn chế do thiếu thông tin hoặc thông tin không minh bạch",
+                mission: "Phải có ai đó chịu trách nhiệm về chất lượng sản phẩm cũng như xuất xứ của nó phải được tôn trọng, đây là nhu cầu chính đáng và bức thiết trong nền kinh tế online.&#13;&#10Đường đi của sản phẩm song song với đường đi của dữ liệu",
+                technology: "Với sự kết hợp giữa RFID & mã QR thông qua việc đồng bộ hóa đã giúp chúng tôi đăng kí được bằng sáng chế cho giải pháp TrueData. Sự kết hợp này tạo nên bước tiến mạnh mẽ trong lĩnh vực truy xuất nguồn gốc sản phẩm",
+            },
+            {
+                logo: './images/TrueHappyfarm.jpg',
+                name: 'TrueHappyFarm',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TrueWork.jpg',
+                name: 'TrueWork',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TrueLogistic.jpg',
+                name: 'TrueLogistic',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TruePharma.jpg',
+                name: 'TruePharma',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TrueSell.jpg',
+                name: 'TrueSell',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TrueID.jpg',
+                name: 'TrueID',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            },
+            {
+                logo: './images/TrueShop.png',
+                name: 'TrueShop',
+                description: "đang cập nhật . . .",
+                context: "đang cập nhật . . .",
+                mission: "đang cập nhật . . .",
+                technology: "đang cập nhật . . .",
+            }
+        ]
+        const renderProducts = (listProducts) => {
+            let idListProducts = document.getElementById('list-products');
+            listProducts.map((item, index) => {
+                idListProducts.innerHTML += `
+                <div class="box" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                    <img src="${item.logo}" alt="icon">
+                    <h3>${item.name}</h3>
+                    <p>
+                        ${item.description}
+                    </p>
+                    <button id="modalOpen" onclick="renderModal(${index})" class="btn">Xem thêm</button>
+                </div>
+            `
+            })
+        }
+        renderProducts(arrayProduct);
+
+        const renderModal = (indexProduct) => {
+            let idModal = document.getElementById('modal');
+            idModal.innerHTML = `
+            <div class="modal" id="modalClose">
+                <div class="modal-overlay visible" id="modalOverlay">
+                    <div class="modal-content" id="content">
+                        <div class="modal-detail">
+                            <div class="logo">
+                                <img src="${arrayProduct[indexProduct].logo}" alt="${arrayProduct[indexProduct].name}">
+                            </div>
+                            <div class="content-modal">
+                                <h1 class="birth-bg">Bối cảnh ra đời</h1>
+                                <div class="content">
+                                    <img src="./images/context.png" alt="context">
+                                    <p>
+                                        ${arrayProduct[indexProduct].context}
+                                    </p>
+                                </div>
+                                <h1 class="mission">Sứ mệnh</h1>
+                                <div class="content">
+                                    <img src="./images/mission.png" alt="context">
+                                    <p>
+                                        ${arrayProduct[indexProduct].mission}
+                                    </p>
+                                </div>
+                                <h1 class="tech">công nghệ</h1>
+                                <div class="content">
+                                    <img src="./images/tech.png" alt="context">
+                                    <p>
+                                        ${arrayProduct[indexProduct].technology}
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="close-modal-x">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <button id="close-modal" class="btn">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               `
+            const modalOverlay = document.getElementById("modalOverlay");
+            const modalClose = document.getElementById("modalClose");
+            const modalContent = document.getElementById("content");
+            const closeModalBtn = document.getElementById("close-modal");
+            const closeModalBtnX = document.getElementById("close-modal-x");
+
+
+            modalContent.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                return false;
+            });
+
+            closeModalBtnX.addEventListener("click", () => {
+                modalOverlay.classList.remove("visible");
+            });
+
+            closeModalBtn.addEventListener("click", () => {
+                modalOverlay.classList.remove("visible");
+            });
+
+            modalClose.addEventListener("click", () => {
+                modalOverlay.classList.remove("visible");
+            });
+        }
+    </script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        $(document).ready(function () {
+            $(".navbar > a").click(function () {
+                $(".navbar > a").removeClass("active");
+                $(this).addClass("active");
+            });
+            $('.customer-logos').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: true,
+                dots: false,
+                pauseOnHover: false,
+                prevArrow: '<i class="slick-prev fas fa-angle-left"></i>',
+                nextArrow: '<i class="slick-next fas fa-angle-right"></i>',
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 999,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+
+                    {
+                        breakpoint: 790,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }]
+            });
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+</body>
+
+</html>

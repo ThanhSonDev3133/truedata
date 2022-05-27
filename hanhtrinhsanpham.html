@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoTrueData.png" type="image/jpg" />
+    <title>TrueData - Hành Trình Sản Phẩm</title>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- lib animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+        <a href="/" class="logo">
+            <img src="images/logoTrueData.png" alt="logoTrueData">
+        </a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="navbar">
+            <a href="#home" class="active">trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#ecosystem">hệ sinh thái</a>
+            <a href="#customer">Đối tác</a>
+            <a href="#footer">liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- <div id="modal">
+        <div class="modal" id="modalClose">
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-content" id="content">
+                    <div class="modal-detail">
+                        <div style="height: 80vh;" id="map"></div>
+                        <div id="close-modal-x">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- product info bar -->
+    <div class="wrapper-product-info-bar">
+        <div class="column-title">
+            <span>Tên sản phẩm: </span>
+            <span>Mã GS1 - GTIN: </span>
+            <span>Mã GS2 - EPC:</span>
+        </div>
+        <div class="column-value">
+            <span>Tổ yến hóa lỏng</span>
+            <span>123435565</span>
+            <span>123435565</span>
+        </div>
+    </div>
+    <div class="wrapper-company-info">
+        <h1>Thông tin nhà ứng dụng</h1>
+        <div class="logo-company">
+            <img src="images/logo-company.png" alt="logo-company" />
+        </div>
+        <div class="form-info">
+            <div class="box">
+                <span>Công ty ứng dụng truy xuất</span>
+                <p>CTY TNHH Vita orga</p>
+            </div>
+            <div class="box">
+                <span>Địa chỉ</span>
+                <p>E40, Đường C3, KP4, Tân Thới Nhất, Q12</p>
+            </div>
+            <div class="box">
+                <span>Email</span>
+                <p>VitaOrga@gmail.com</p>
+            </div>
+            <div class="box">
+                <span>Số điện thoại</span>
+                <p>1900.63.33.73</p>
+            </div>
+            <div class="box">
+                <span>Web</span>
+                <p>http://VitaOrga.com</p>
+            </div>
+            <div class="box">
+                <span>Nhà cung cấp giải pháp TrueData</span>
+                <p>OneBox</p>
+            </div>
+            <div class="box">
+                <span>Nhà cung cấp bảo hiểm</span>
+                <p class="placeholder">Chưa có thông tin</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-manufacturing-steps">
+        <h1>Hành trình</h1>
+        <div class="insurance-status">
+            <div class="logo">
+                <img src="./images/insurance.png" alt="logo-insurance">
+            </div>
+            <p>
+                Sản phẩm đã kích hoạt bảo hiểm
+            </p>
+        </div>
+        <div class="finished-materials" aria-expanded="false">
+            <h2>Nguyên liệu thành phẩm</h2>
+            <div class="group-materials">
+                <div class="material">
+                    <div class="logo">
+                        <img src="./images/material.png" alt="material">
+                    </div>
+                    <p class="name-material">
+                        Tổ yến thô
+                    </p>
+                    <div class="arrow">
+                        <img src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="logo">
+                        <img src="./images/material.png" alt="material">
+                    </div>
+                    <p class="name-material">
+                        Mật ong
+                    </p>
+                    <div class="arrow">
+                        <img src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="logo">
+                        <img src="./images/material.png" alt="material">
+                    </div>
+                    <p class="name-material">
+                        Mật ong x Tổ yến x Mật ong x Tổ yến
+                    </p>
+                    <div class="arrow">
+                        <img src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="logo">
+                        <img src="./images/material.png" alt="material">
+                    </div>
+                    <p class="name-material">
+                        Tổ yến thô
+                    </p>
+                    <div class="arrow">
+                        <img src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="logo">
+                        <img src="./images/material.png" alt="material">
+                    </div>
+                    <p class="name-material">
+                        Mật ong
+                    </p>
+                    <div class="arrow">
+                        <img src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <div class="material">
+                        <div class="logo">
+                            <img src="./images/material.png" alt="material">
+                        </div>
+                        <p class="name-material">
+                            Mật ong x Tổ yến x Mật ong x Tổ yến
+                        </p>
+                        <div class="arrow">
+                            <img src="./images/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="material">
+                        <div class="logo">
+                            <img src="./images/material.png" alt="material">
+                        </div>
+                        <p class="name-material">
+                            Tổ yến thô
+                        </p>
+                        <div class="arrow">
+                            <img src="./images/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="material">
+                        <div class="logo">
+                            <img src="./images/material.png" alt="material">
+                        </div>
+                        <p class="name-material">
+                            Mật ong
+                        </p>
+                        <div class="arrow">
+                            <img src="./images/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="material">
+                        <div class="logo">
+                            <img src="./images/material.png" alt="material">
+                        </div>
+                        <p class="name-material">
+                            Tổ yến thô
+                        </p>
+                        <div class="arrow">
+                            <img src="./images/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="material">
+                        <div class="logo">
+                            <img src="./images/material.png" alt="material">
+                        </div>
+                        <p class="name-material">
+                            Mật ong
+                        </p>
+                        <div class="arrow">
+                            <img src="./images/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="card" class="card">
+            <span class="number-card">1</span>
+            <h3>Kho vùng nguyên liệu</h3>
+            <p class="name-process">Thu hoạch</p>
+            <div class="content-process">
+                <div class="box">
+                    <span>Thời gian ghi dữ liệu</span>
+                    <p>27/07/2021 07:05:04</p>
+                </div>
+                <div class="box">
+                    <span>Tên sản phẩm (Nguyên liệu)</span>
+                    <p>Tô yến thô</p>
+                </div>
+                <div class="box">
+                    <span>Tên cá nhân / Đơn vị</span>
+                    <p>Nhà yến Nguyễn Thanh Tùng</p>
+                </div>
+                <div class="box">
+                    <span>Số điện thoại</span>
+                    <p>0964847239</p>
+                </div>
+                <div class='box-hidden'>
+                    <div class="box">
+                        <span>Địa chỉ</span>
+                        <p>Tổ 18, ấp Hội An, Tân Hội, Tân Châu, Tây Ninh</p>
+                    </div>
+                    <div class="box">
+                        <span>Tọa độ</span>
+                        <div style="height: 500px;" id="map"></div>
+                    </div>
+                </div>
+                <div class='button-expand'>
+                    <img id="vector" class="expanded" src="images/Vector.png" alt="vector" />
+                </div>
+            </div>
+        </div>
+
+        <div id="card" class="card">
+            <span class="number-card">2</span>
+            <h3>Kho vùng nguyên liệu</h3>
+            <p class="name-process">Thu hoạch</p>
+            <div class="content-process">
+                <div class="box">
+                    <span>Thời gian ghi dữ liệu</span>
+                    <p>27/07/2021 07:05:04</p>
+                </div>
+                <div class="box">
+                    <span>Tên sản phẩm (Nguyên liệu)</span>
+                    <p>Tô yến thô</p>
+                </div>
+                <div class="box">
+                    <span>Tên cá nhân / Đơn vị</span>
+                    <p>Nhà yến Nguyễn Thanh Tùng</p>
+                </div>
+                <div class="box">
+                    <span>Số điện thoại</span>
+                    <p>0964847239</p>
+                </div>
+                <div class='box-hidden'>
+                    <div class="box">
+                        <span>Địa chỉ</span>
+                        <p>Tổ 18, ấp Hội An, Tân Hội, Tân Châu, Tây Ninh</p>
+                    </div>
+                    <div class="box">
+                        <span>Tọa độ</span>
+                        <div style="height: 500px;" id="map"></div>
+                    </div>
+                </div>
+                <div class='button-expand'>
+                    <img id="vector" class="expanded" src="images/Vector.png" alt="vector" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="wrapper-about-us">
+        <h1>Về chúng tôi</h1>
+
+        <div class="form-info">
+            <div class="box">
+                <span>Công ty</span>
+                <p>Công ty TNHH Vita orga</p>
+            </div>
+            <div class="box">
+                <span>Địa chỉ</span>
+                <p>E40, Đường C3, KP4, Tân Thới Nhất, Q12</p>
+            </div>
+
+            <div class="box">
+                <span>Số điện thoại</span>
+                <p>1900.63.33.73</p>
+            </div>
+            <div class="box">
+                <span>Email</span>
+                <p>VitaOrga@gmail.com</p>
+            </div>
+            <div class="box">
+                <span>Giấy chứng nhận</span>
+                <div class="box-slide-certificate slider">
+                    <div class="slide-in-right  image-certificate">
+                        <img src="images/certificate.png" alt="certificate" />
+                    </div>
+                    <div class="slide-in-right  image-certificate">
+                        <img src="images/certificate.png" alt="certificate" />
+                    </div>
+                    <div class="slide-in-right  image-certificate">
+                        <img src="images/certificate.png" alt="certificate" />
+                    </div>
+                    <div class="slide-in-right  image-certificate">
+                        <img src="images/certificate.png" alt="certificate" />
+                    </div>
+                    <div class="slide-in-right  image-certificate">
+                        <img src="images/certificate.png" alt="certificate" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Video</h1>
+        <div class="box-slide-video">
+
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+            <div class="box-video">
+                <img src="images/video-image.png" alt="video-image.png" />
+            </div>
+
+        </div>
+        <h1>Sản phẩm tương tự</h1>
+        <div class="box-slide-similar-product">
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+            <div class="box-similar-product">
+                <img src="images/product-similar.png" alt="product-similar" />
+                <p class="name-product">Yến thô</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+
+        <!-- footer section -->
+        <div class="footer">
+            <div class="box-container">
+                <div class="box box-about">
+                    <h3>giới thiệu</h3>
+                    <p> <span>TrueData</span>, với sản phẩm bảo hiểm “Mua hàng chính hãng”, những gì chúng tôi cung cấp
+                        cho
+                        người mua
+                        là dữ liệu thật, không ngụy tạo. Điều đó hình thành nên định chế trung gian gắn liền người mua
+                        và
+                        người bán. Chúng tôi muốn đóng góp bằng cả tâm huyết của mình trong hành trình : <br> "Mang sản
+                        phẩm
+                        Việt ra thị trường thế giới"</p>
+
+                </div>
+
+                <div class="box box-quick-link">
+                    <h3>Đường dẫn</h3>
+                    <a href="#home">Trang chủ</a>
+                    <a href="#about">giới thiệu</a>
+                    <a href="#ecosystem">Hệ sinh thái</a>
+                    <a href="#customer">đối tác</a>
+                    <a href="#contact">liên hệ</a>
+                </div>
+                <div class="box box-contact">
+                    <h3>liên hệ</h3>
+                    <div class="info">
+                        <div class="icon-phone">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <a href="tel:+0789763373">0789 763 373</a>
+                    </div>
+                    <div class="info">
+                        <div class="icon-email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <a style="text-transform: lowercase;"
+                            href="mailto:truedatasolution@gmail.com">truedatasolution@gmail.com</a>
+                    </div>
+                    <div class="info">
+                        <div class="icon-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <a href="https://goo.gl/maps/1nKvFbxSH4ceQ29s9" target="_blank" rel="noopener noreferrer">E40
+                            đường
+                            C3, p Tân thới nhât, Q. 12</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-after">
+                <p>
+                    © 2021. All Rights Reserved. Designed by <a href="#">TrueData</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+        function initMap() {
+            //tọa độ của kho nguyên liệu. nhận từ api
+            const coordinate = { lat: 10.823074, lng: 106.622990 };
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: coordinate,
+            });
+            const marker = new google.maps.Marker({
+                position: coordinate,
+                map: map,
+            });
+        }
+        const finisedMaterial = document.querySelector('.finished-materials');
+        finisedMaterial.addEventListener("click", () => {
+            const collapsibleMaterials = finisedMaterial.querySelector('.collapsible');
+            if (
+                finisedMaterial.getAttribute("aria-expanded") === "false" ||
+                finisedMaterial.getAttribute("aria-expanded") === null
+            ) {
+                finisedMaterial.setAttribute("aria-expanded", "true");
+                collapsibleMaterials.style.maxHeight = `${collapsibleMaterials.scrollHeight}px`;
+            } else {
+                finisedMaterial.setAttribute("aria-expanded", "false");
+                collapsibleMaterials.style.maxHeight = "0";
+            }
+        })
+        $(document).ready(function () {
+
+            $(".navbar > a").click(function () {
+                $(".navbar > a").removeClass("active");
+                $(this).addClass("active");
+            });
+            $('.card').on('click', function () {
+                $(this).toggleClass("expanded");
+                $(this).find('#vector').toggleClass("rotate")
+            });
+            $('#map').on('click', function (e) {
+                e.stopPropagation();
+            })
+            $('.box-slide-certificate').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+
+            });
+            $('.box-slide-similar-product').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+
+            });
+            $('.box-slide-video').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+
+            });
+            $('.customer-logos').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: true,
+                dots: false,
+                pauseOnHover: false,
+                prevArrow: '<i class="slick-prev fas fa-angle-left"></i>',
+                nextArrow: '<i class="slick-next fas fa-angle-right"></i>',
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 999,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+
+                    {
+                        breakpoint: 790,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }]
+            });
+        });
+        // const modalOverlay = document.getElementById("modalOverlay");
+        // const modalClose = document.getElementById("modalClose");
+        // const modalContent = document.getElementById("content");
+        // const closeModalBtnX = document.getElementById("close-modal-x");
+
+
+        // modalContent.addEventListener("click", (e) => {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     e.stopImmediatePropagation();
+        //     return false;
+        // });
+
+
+        // closeModalBtnX.addEventListener("click", () => {
+        //     modalOverlay.classList.remove("visible");
+        // });
+
+        // modalClose.addEventListener("click", () => {
+        //     modalOverlay.classList.remove("visible");
+        // });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="scripts.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOHX5DvA6unv1Is4xS6S7MMvTyUpHWwLw&callback=initMap&libraries=&v=weekly"
+        async></script>
+</body>
+
+</html>
